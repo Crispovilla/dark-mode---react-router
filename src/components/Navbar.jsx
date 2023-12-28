@@ -4,11 +4,21 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <nav className="text-slate-900 dark:text-slate-200 mx-auto px-2">
-        <div className="relative inline-flex items-center justify-center">
-          <NavLink to={"/"}>Home</NavLink>
-          <NavLink to={"/about"}>About</NavLink>
-          <NavLink to={"/contact"}>Contact</NavLink>
+      <nav className="text-slate-900 dark:text-slate-200 ">
+        <div className="container mx-auto px-4 ">
+          <div className="flex items-center justify-between py-4">
+            <div className="flex items-center">
+              <NavLink to={"/"} className="ml-4">
+                Home
+              </NavLink>
+              <NavLink to={"/about"} className="ml-4">
+                About
+              </NavLink>
+              <NavLink to={"/contact"} className="ml-4">
+                Contact
+              </NavLink>
+            </div>
+          </div>
         </div>
       </nav>
     </>
