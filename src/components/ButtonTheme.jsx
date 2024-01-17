@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { WiMoonWaningCrescent3, WiDaySunny } from "react-icons/wi";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
+
 const ButtonTheme = () => {
   const [theme, setTheme] = useState(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -9,9 +10,11 @@ const ButtonTheme = () => {
     }
     return "light";
   });
+
   const handleChangeTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
+
   useEffect(() => {
     if (theme === "dark") {
       document.querySelector("html").classList.add("dark");
@@ -21,7 +24,7 @@ const ButtonTheme = () => {
   }, [theme]);
 
   return (
-    <div className="h-screen px-4 py-4 dark:bg-neutral-900">
+    <div className="h-screen px-4 py-4 dark:bg-dark">
       <div>
         <Navbar />
       </div>
